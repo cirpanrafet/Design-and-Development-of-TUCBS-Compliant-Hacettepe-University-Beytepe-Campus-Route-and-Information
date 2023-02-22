@@ -1,0 +1,3 @@
+tasarım hazır, harita yüklendi ama şu an boş,
+sol navigasyon barındaki sekmeler(binalar vs) aktif değil içleri boş
+sol barın açılıp kapnma animasyonu çalışıyor.

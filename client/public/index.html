@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <meta name="Hacettepe Üniversitesi" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="toggleSwitch.css">
+    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="logo.css">
+    <link rel="stylesheet" href="popup.css">
+    <script type="module" src="test.js"></script>
+    
+
+
+
+
+
+    <title>React App</title>
+  </head>
+  <body>
+  <div id="root"></div>
+    <div id="content">
+      <!-- Left Sidebar -->
+      <div>
+          <div id="sidebarLeft">
+              <div id="titleElements">
+                  <!-- Title + Slant -->
+                  <h1 id="title">Harita Hacettepe</h1>
+              
+                  <span id="title-slant" class="uw-slant-large"></span>
+                  <!-- UW Wordmark -->
+
+              </div>
+
+              <!-- Nav -->
+              <div id="nav-header-container">
+                  <h5 id="navHeader" class="header">ROTA PLANLAYICI</h5>
+                  <img id="nav-info" class="info-icon" alt="information" src="assets/logos/route-icon-trendy-flat-style-260nw-418178818.webp">
+              </div>
+              <div id="nav-popup-container" class="is-not-visible">
+                  <h4 class="instruction-header"> <span class="underline"></span></h4>
+                  <p class="instruction-header"></p>
+              </div>
+              <span class="uw-slant"></span>
+
+              <!-- Input Fields -->
+              <div id="navSection" class="inputs contentSection">
+                  <!-- Select Start -->
+                  <div class="inputDiv">
+                      <select aria-label="Başlangıç Noktası" name="startingPoints" id="startingPointsId" class="select">
+                          <!-- Default -->
+                          <option value="--Varış Noktası--">--Başlangıç Noktası--</option>
+                          <!-- All Locations Grouped by Type -->
+                          <!-- [Dynamically added] -->
+                      </select>
+                  </div>
+
+                  <!-- Select End -->
+                  <div class="inputDiv">
+                      <!--<img class="miniEndMarker" src="MarkerIcon2.png"></img>-->
+                      <select aria-label="Destination" name="destinations" id="destinationsId" class="select">
+                          <!-- Default -->
+                          <option value="--Select Destination--">--Varış Noktası--</option>
+                          <!-- All Locations Grouped by Type -->
+                          <!-- [Dynamically added] -->
+                      </select>
+                  </div>
+                  <!-- Navigation Button -->
+                  <button id="navBtn" class="navBtn">ROTA OLUŞTUR</button>
+              </div>
+
+              <!-- Buildings List -->
+              <h6 id="buildingsHeader" class="header"> BİNALAR </h6>
+              <span class="uw-slant"></span>
+              <!-- TODO: "height: 0px" attribute is not included in stylesheet since it gets overwritten somehow, leading
+              to bug where the user must click on a header twice before it functions properly. Fix style. -->
+              <div id="buildingsSection" class="contentSection" style="height: 0px;">
+                  <input type="text" class="searchBar" id="buildingsSearch" placeholder="Search for buildings..">
+                  <div id="building-container" class="vertical-menu">
+                      <!-- [Dynamically Added] -->
+                  </div>
+              </div>
+
+              <!-- Libraries List -->
+              <h6 id="librariesHeader" class="header"> KÜTÜPHANE </h6>
+              <span class="uw-slant"></span>
+              <div id="librariesSection" class="contentSection" style="height: 0px;">
+                  <input type="text" class="searchBar" id="librariesSearch" placeholder="Search for libraries..">
+                  <div id="library-container" class="vertical-menu">
+                      <!-- [Dynamically Added] -->
+                  </div>
+              </div>
+
+              <!-- Bus Stops List -->
+              <h6 id="stopHeader" class="header"> RİNG DURAKLARI </h6>
+              <span class="uw-slant"></span>
+              <div id="stopSection" class="contentSection" style="height: 0px;">
+                  <input type="text" class="searchBar" id="busStopSearch" placeholder="Search for bus stops..">
+                  <div id="bus-stop-container" class="vertical-menu">
+                      <!-- [Dynamically Added] -->
+                  </div>
+              </div>
+
+              <!--Feedback-->
+              <h6 id="feedbackHeader" class="header"> GERİ BİLDİRİM </h6>
+              <span class="uw-slant"></span>
+              <div id="feedbackSection" class="contentSection" style="height: 0px;">
+                  <!-- Feedback Input -->
+                  <textarea id="feedbackInput" aria-label="Feedback" name="Feedback" rows="4" cols="24" placeholder='What can we improve? We truly appreciate your feedback, feel free to leave your email! '></textarea>
+                  <!-- Feedback Submission Button -->
+                  <button id="submitFeedback"> Submit </button>
+              </div>
+
+              <!--About Us-->
+              <h6 id="aboutHeader" class="header"> HAKKIMIZDA </h6>
+              <span class="uw-slant"></span>
+              <div id="aboutSection" class="contentSection" style="height: 0px;">
+                  <p class="contributor"><a style="color: whitesmoke; text-decoration:none;" href="https://www.linkedin.com/in/cirpanrafet/"> Berke AYGÖREN </a> 26' | Software </p>
+                  <p class="contributor"><a style="color: whitesmoke; text-decoration:none;" href="https://www.linkedin.com/in/cirpanrafet/"> Fevzican KARAKUŞ </a> 23' | Software </p>
+                  <p class="contributor"><a style="color: whitesmoke; text-decoration:none;" href="https://www.linkedin.com/in/cirpanrafet/"> Rafet ÇIRPAN </a> 23' | Software </p>
+                  
+              </div>
+              <div id="terms">
+                  <a style="color: gray; text-decoration:underline;" >Terms of Service</a>
+                  <span style="color: gray; text-decoration:underline;">|</span>
+                  <a style="color: gray; text-decoration:underline;">Cookie Policy</a>
+              </div>
+          </div>
+          <div id="expand-icon-div" onclick="toggleSideBarMobile()">
+              <hr class="expand-icon-bar">
+              <hr class="expand-icon-bar">
+              <hr class="expand-icon-bar">
+          </div>
+      </div>
+      <!-- Right Sidebar (in the same row as the main logo) -->
+      <div class="sidebarRight">
+          <img id="logo" src="assets/logos/55.png">
+      </div>
+
+      <!-- Horizontal Sidebar -->
+      <div id="horizontalBarId" class="horizontalBar">
+          <!-- Start -->
+          <img id="startMarker" class="marker" alt="Start Point Icon" src="assets/markerIcons/location-pin.png">
+          <p id="from" class="tofrom">Başlangıç Noktası</p>
+          <div class="horizontalSpacer"></div>
+          <!-- End -->
+          <img id="endMarker" class="marker" alt="End Point Icon" src="assets/markerIcons/route (2).png">
+          <p id="to" class="tofrom">Varış Noktası</p>
+          <!-- Distance -->
+          <div class="bar"> &#9474 </div>
+          <div id="distance"> Mesafe: &#8211 &#8211 metre </div>
+          <!-- ETA -->
+          <div class="bar"> &#9474 </div>
+          <div id="eta"> Tahmini Varış Süresi: &#8211 &#8211 dakika </div>
+          <!-- Theme Switch -->
+          
+          <!-- Location Icon -->
+          <div id="locationIconDiv" title="">
+              <img id="locationIcon" src="assets/miscIcons/LocationIcon.png" alt="//:0">
+          </div>
+          <!-- GitHub Page Icon -->
+          <div class="githubIconDiv" title="Visit GitHub Repository">
+              <a href="https://github.com/cirpanrafet/HacettepeHarita" aria-label="Visit GitHub Repository">
+                  <img alt="GitHub Icon" src="assets/miscIcons/GithubIcon.png" id="githubIcon">
+              </a>
+          </div>
+          
+          <!-- Color Theme Switcher -->
+          <label id="switch">
+              <input aria-label="checkbox" id="themeCheckbox" type="checkbox">
+              <span id="slider"></span>
+          </label>
+      </div>
+  </div>
+
+</body>
+
+</html>
+
+
+
+  </body>
+</html>
