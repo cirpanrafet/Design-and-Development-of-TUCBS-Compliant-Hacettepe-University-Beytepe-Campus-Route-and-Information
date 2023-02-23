@@ -1,3 +1,6 @@
+21.02.2023:
 tasarım hazır, harita yüklendi ama şu an boş,
-sol navigasyon barındaki sekmeler(binalar vs) aktif değil içleri boş
-sol barın açılıp kapnma animasyonu çalışıyor.
+sidebar-left sekmeler(binalar vs) aktif değil içleri boş
+sidebar-left açılıp kapanma animasyonu çalışıyor.
+23.02.2023:
+sidebar-left sekmeler(binalar vs) aktifleştirildi(açılıp kapanma animasyonları)
