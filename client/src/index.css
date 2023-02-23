@@ -44,6 +44,9 @@
   text-align: center;
 }
 
+
+
+
 #nav-header-container {
   display: flex;
   flex-direction: row;
@@ -186,19 +189,19 @@ option {
   transition: 0.5s;
 }
 
-/*
+
 #navBtn {
     border-radius: 5px;
     width: 200px;
     height: 40px;
     font-family: 'Encode Sans', sans-serif;
-    background-color: #b7a57a;
+    background-color: #7ac297;
     cursor: pointer;
 }
-*/
+
 #navBtn:hover {
   background-color: #cc2647;
-  border-color: #b7a57a;
+  border-color: #7ac297;
 
   transition: 0.5s;
 }
@@ -235,6 +238,7 @@ option {
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
+  
 }
 
 .miniStartMarker {
@@ -294,7 +298,7 @@ option {
   background-color: #7ac297;
   transform: skew(-25deg, 0);
   display: block;
-  width: 120px;
+  width: 120px; 
   margin-left: 40px;
   height: 3px;
   margin-bottom: 10px;
@@ -360,6 +364,7 @@ option {
 }
 
 #locationIconDiv {
+  
   margin-left: auto;
   margin-right: 10px;
   margin-top: 1px;

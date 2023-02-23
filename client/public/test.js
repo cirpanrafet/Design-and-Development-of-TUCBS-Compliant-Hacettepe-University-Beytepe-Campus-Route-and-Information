@@ -1,3 +1,55 @@
+var buildingLocations = {}
+
+var libraryLocations = {
+
+}
+
+var disabledLibraries = ["Gowen Library"];
+
+var busLocations = {
+    //"Stevens Way and Okanogan Ln": [47.652027, -122.308655], //
+
+}
+
+var locationsMap;
+
+var navigableLocationsMap;
+
+// Stores the building/library/bus-stop marker currently on the map.
+var mapMarkers = [];
+
+// Stores the "current location" marker on the map.
+var locationMarkers = [];
+
+// Stores the current path on the map.
+var geoJSONPaths = [];
+
+// Maps content section id's (for Navigation, Buildings, etc.) to pixel heights.
+var dropDownLengths = {
+    "navSection": "160px",
+    "buildingsSection": "200px",
+    "stopSection": "200px",
+    "aboutSection": "130px",
+    "librariesSection": "200px",
+    "feedbackSection": "120px"
+}
+
+// Maps search bar id's to the class of items being searched.
+var searchItemsClass = {
+    "buildingsSearch": "building",
+    "busStopSearch": "bus-stop",
+    "librariesSearch": "library"
+}
+
+// Maps search bar ids to the container id of the items being searched.
+var searchItemsContainer = {
+    "buildingsSearch": "building-container",
+    "busStopSearch": "bus-stop-container",
+    "librariesSearch": "library-container"
+}
+
+
+
 
 // Adds event listeners.
 logo.addEventListener("click", toggleContent);
